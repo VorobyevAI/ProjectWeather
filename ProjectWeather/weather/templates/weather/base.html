@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
+{% load static %}
+<meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
+<html lang="ru">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/main.css'%}" type="text/css">
+<head>
+ <div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Find out the weather </p>
+  </footer>
+</div>
 </head>
 <body>
-      {% block body %} {% endblock %}
+{% block body %}{% endblock %}
 </body>
+
+<footer>
+<div class="wrapper">
+<div class="footer">
+  <p class="text">
+    <a href="{% static 'weather/css/main.css' %}" class="container"><link rel="stylesheet" href="{% static 'weather/css/main.css' %}"> Фото1</a>
+    <a href="https://images.unsplash.com/photo-1570092178365-4cd46034bb19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" class="container">Фото2</a>
+    <a href="https://images.unsplash.com/photo-1604231751678-3f2b03928c10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="container">Фото3</a>
+  </p>
+</div>
+</div>
 </html>
+</footer>
+

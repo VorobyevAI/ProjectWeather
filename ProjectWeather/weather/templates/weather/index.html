@@ -1,3 +1,119 @@
 {% extends 'weather/base.html' %}
-{% block title %} {% endblock %}
-{% block body %} НАЧАЛО{% endblock %}
+{% block title %}FOTW {% endblock %}
+
+
+{% block body %}
+
+<section id="subsection-search-with-icon">
+
+      <h4 class="mb-4">Search with icon</h4>
+
+      <p>
+        See all the available icons in the
+        <a href="https://mdbootstrap.com/docs/standard/content-styles/icons/" target="_blank">Icons Docs</a>.
+      </p>
+
+
+      <section class="pb-4">
+  <div class="bg-white border rounded-5">
+
+      <section class="w-100 p-4 pb-4 d-flex justify-content-center align-items-center flex-column">
+        <div>
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+
+
+
+    <div class="p-4 text-center border-top mobile-hidden">
+      <a class="btn btn-link px-3" data-mdb-toggle="collapse" href="#example2" role="button" aria-expanded="false" aria-controls="example2" data-ripple-color="hsl(0, 0%, 67%)">
+        <i class="fas fa-code me-md-2"></i>
+        <span class="d-none d-md-inline-block">
+          Show code
+        </span>
+      </a>
+
+
+        <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+          <i class="fas fa-file-code me-md-2 pe-none"></i>
+          <span class="d-none d-md-inline-block export-to-snippet pe-none">
+            Edit in sandbox
+          </span>
+        </a>
+
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+      <section class="collapse" id="example2">
+        <div class="pb-4">
+
+
+
+
+
+
+
+
+
+  <div class="docs-pills border mobile-hidden">
+    <div class="d-flex justify-content-between py-2" style="padding-left: .6rem;">
+      <ul class="nav nav-pills p-2">
+
+
+
+          <li class="nav-item"><a class="nav-link  active show " data-mdb-toggle="tab" href="#mdb_9741bb4da9ccbe0141f628f44a2e7c2daf92f988" role="tab">HTML</a></li>
+
+      </ul>
+    </div>
+    <div class="tab-content">
+
+
+
+
+
+
+<div class="tab-pane fade  active show " id="mdb_9741bb4da9ccbe0141f628f44a2e7c2daf92f988" role="tabpanel">
+    <div class="code-toolbar"><pre class="grey lighten-3 mb-0 line-numbers  language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input-group rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>form-control rounded<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span> <span class="token attr-name">aria-describedby</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search-addon<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input-group-text border-0<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search-addon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas fa-search<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="btn-copy-code btn btn-dark btn-sm" data-mdb-ripple-color="dark" data-mdb-ripple-unbound="true">Copy</button></div></div></div>
+</div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+        </div>
+      </section>
+    </section>
+
+<article class="box weather">
+  <div class="icon bubble black">
+    <div class="spin">
+      <img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt="фото" class="img-thumbnail" >
+    </div>
+  </div>
+
+  <h1>{{info.time}}</h1>
+  <span class="temp">{{ info.temp }}</span>
+    <span class="temp">{{ info.city }}</span>
+</article>
+
+{% endblock %}
