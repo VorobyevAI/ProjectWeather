@@ -19,12 +19,15 @@
 
       <section class="w-100 p-4 pb-4 d-flex justify-content-center align-items-center flex-column">
         <div>
-          <div class="input-group rounded">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+            <form action="" method="post">
+            {% csrf_token %}
+            {{ form.name }}
             <span class="input-group-text border-0" id="search-addon">
-              <i class="fas fa-search"></i>
+                <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-danger">
+
             </span>
           </div>
+          </form>
         </div>
       </section>
 
@@ -110,10 +113,11 @@
       <img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt="фото" class="img-thumbnail" >
     </div>
   </div>
-
-  <h1>{{info.time}}</h1>
-  <span class="temp">{{ info.temp }}</span>
-    <span class="temp">{{ info.city }}</span>
+{% for el in info %}
+  <h1>{{el.time}}</h1>
+  <span class="temp">{{ el.temp }}</span>
+    <span class="temp">{{ el.city }}</span>
+    <img src="http://openweathermap.org/img/w/{{el.icon}}.png" alt="фото" class="img-thumbnail" >
 </article>
-
+{% endfor %}
 {% endblock %}
